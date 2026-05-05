@@ -5,8 +5,13 @@
   "description": "Step-by-step guide for the Capinex Finance app. Written for sales teams.",
   "colors": {
     "primary": "#1E212D",
-    "light": "#155DFC",
+    "light": "#FFD60A",
     "dark": "#0B0E1A"
+  },
+  "favicon": "/favicon.png",
+  "logo": {
+    "light": "/favicon.png",
+    "dark": "/favicon.png"
   },
   "navigation": {
     "groups": [
