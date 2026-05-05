@@ -1,0 +1,62 @@
+/* Capinex docs polish — Luma theme overrides
+   Selectors target Mintlify's data-component-part hooks where possible. */
+
+:root {
+  --capinex-yellow: #FFD60A;
+  --capinex-yellow-soft: rgba(255, 214, 10, 0.12);
+  --capinex-navy: #0B0E1A;
+}
+
+/* — Step number indicators: bright yellow circles instead of grey blobs — */
+[data-component-part="step-number"] > div:first-child {
+  background: var(--capinex-yellow) !important;
+  color: var(--capinex-navy) !important;
+  box-shadow: 0 0 0 4px rgba(255, 214, 10, 0.10);
+}
+[data-component-part="step-number"] > div:first-child > div:first-child {
+  color: var(--capinex-navy) !important;
+}
+
+/* — Step connector line: more subtle — */
+[data-component-part="step-line"] {
+  opacity: 0.4;
+}
+
+/* — Cards: lift + brand-glow on hover — */
+a[href][class*="rounded-2xl"],
+a[href][class*="rounded-xl"][class*="border"] {
+  transition: transform 0.16s ease, border-color 0.16s ease, box-shadow 0.16s ease;
+}
+a[href][class*="rounded-2xl"]:hover,
+a[href][class*="rounded-xl"][class*="border"]:hover {
+  transform: translateY(-2px);
+  border-color: var(--capinex-yellow) !important;
+  box-shadow: 0 8px 28px -10px rgba(255, 214, 10, 0.22);
+}
+
+/* — Inline code chips: brand tint instead of plain grey — */
+:not(pre) > code {
+  background: var(--capinex-yellow-soft) !important;
+  border-radius: 4px;
+  padding: 1px 6px;
+  font-weight: 500;
+}
+
+/* — Tables: tighter, more readable — */
+table {
+  border-collapse: separate;
+  border-spacing: 0;
+}
+table th {
+  font-weight: 600;
+  letter-spacing: 0.02em;
+  text-transform: none;
+}
+
+/* — NEW tag in sidebar: punchier — */
+[data-component-part="page-tag"] {
+  background: var(--capinex-yellow) !important;
+  color: var(--capinex-navy) !important;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+}

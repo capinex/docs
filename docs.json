@@ -2,21 +2,36 @@
   "$schema": "https://mintlify.com/docs.json",
   "theme": "luma",
   "name": "Capinex Finance — User Guide",
-  "description": "Step-by-step guide for the Capinex Finance app. Written for sales teams.",
+  "description": "Step-by-step guide for the Capinex Finance app. Written for the sales team — no jargon, no shortcuts.",
   "colors": {
-    "primary": "#1E212D",
+    "primary": "#0B0E1A",
     "light": "#FFD60A",
-    "dark": "#0B0E1A"
+    "dark": "#FFD60A"
   },
   "favicon": "/favicon.png",
   "logo": {
-    "light": "/favicon.png",
-    "dark": "/favicon.png"
+    "light": "/logo/light.svg",
+    "dark": "/logo/dark.svg",
+    "href": "/"
+  },
+  "styling": {
+    "codeblocks": "system"
+  },
+  "fonts": {
+    "heading": {
+      "family": "Inter",
+      "weight": 700
+    },
+    "body": {
+      "family": "Inter",
+      "weight": 400
+    }
   },
   "navigation": {
     "groups": [
       {
         "group": "Welcome",
+        "icon": "hand-wave",
         "pages": [
           "introduction",
           "getting-started/sign-in",
@@ -25,6 +40,7 @@
       },
       {
         "group": "Find & manage customers",
+        "icon": "users",
         "pages": [
           "features/customer-profile",
           "features/loan-applications",
@@ -33,6 +49,7 @@
       },
       {
         "group": "Analyse documents",
+        "icon": "file-magnifying-glass",
         "pages": [
           "features/bl-analyser",
           "features/pl-analyser",
@@ -42,6 +59,7 @@
       },
       {
         "group": "For admins",
+        "icon": "user-shield",
         "pages": [
           "admin/access-control",
           "admin/field-management",
@@ -50,6 +68,7 @@
       },
       {
         "group": "Help",
+        "icon": "circle-question",
         "pages": [
           "help/sign-out",
           "help/troubleshooting"
@@ -60,12 +79,46 @@
   "navbar": {
     "links": [
       {
-        "label": "Open the app",
+        "label": "Raise a ticket",
         "href": "https://app.capinex.in"
+      }
+    ],
+    "primary": {
+      "type": "button",
+      "label": "Open the app",
+      "href": "https://app.capinex.in"
+    }
+  },
+  "footer": {
+    "socials": {
+      "website": "https://capinex.in"
+    },
+    "links": [
+      {
+        "header": "Capinex",
+        "items": [
+          {"label": "Open the app", "href": "https://app.capinex.in"},
+          {"label": "Visit website", "href": "https://capinex.in"}
+        ]
+      },
+      {
+        "header": "Help",
+        "items": [
+          {"label": "Troubleshooting", "href": "/help/troubleshooting"},
+          {"label": "Sign out", "href": "/help/sign-out"}
+        ]
       }
     ]
   },
-  "footer": {
-    "socials": {}
+  "banner": {
+    "content": "Credit Reports is now live in the sidebar. [Learn more →](/features/credit-reports)",
+    "dismissible": true
+  },
+  "seo": {
+    "metatags": {
+      "og:image": "/favicon.png",
+      "og:type": "website"
+    },
+    "indexing": "navigable"
   }
 }
