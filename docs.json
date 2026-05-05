@@ -31,7 +31,6 @@
     "groups": [
       {
         "group": "Welcome",
-        "icon": "hand-wave",
         "pages": [
           "introduction",
           "getting-started/sign-in",
@@ -40,7 +39,6 @@
       },
       {
         "group": "Find & manage customers",
-        "icon": "users",
         "pages": [
           "features/customer-profile",
           "features/loan-applications",
@@ -49,7 +47,6 @@
       },
       {
         "group": "Analyse documents",
-        "icon": "file-magnifying-glass",
         "pages": [
           "features/bl-analyser",
           "features/pl-analyser",
@@ -59,7 +56,6 @@
       },
       {
         "group": "For admins",
-        "icon": "user-shield",
         "pages": [
           "admin/access-control",
           "admin/field-management",
@@ -68,7 +64,6 @@
       },
       {
         "group": "Help",
-        "icon": "circle-question",
         "pages": [
           "help/sign-out",
           "help/troubleshooting"
