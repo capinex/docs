@@ -1,0 +1,188 @@
+---
+title: "BL Analyser"
+description: "Upload a business bank statement PDF. Get an AI summary of cash flow, bounces, red flags, and lending recommendation."
+icon: "briefcase"
+---
+
+BL Analyser stands for **Business Loan Analyser**. You upload a business's bank statement PDF and the app reads it for you — turnover, average monthly inflow and outflow, bounces, red flags, and a clear "is this safe to lend to?" recommendation.
+
+It saves you from reading hundreds of transactions by hand.
+
+<Note>
+  This feature only works on a laptop or desktop. The screen needs to be at least 1100 pixels wide. On a phone you'll see a "use a larger screen" message.
+</Note>
+
+## The home screen
+
+When you tap **BL Analyser**, you see two side-by-side panels:
+
+- **Left panel — Saved Reports**: every PDF your team has analysed before. Each entry shows the account holder name and the date it was uploaded.
+- **Right panel — Report Details**: starts empty. When you tap a saved report, this is where the analysis appears.
+
+A button at the top right says **Upload Bank Statement**.
+
+## How to upload a new statement
+
+<Steps>
+  <Step title="Tap 'Upload Bank Statement'">
+    A dialog opens.
+  </Step>
+  <Step title="Tap 'Pick & Upload'">
+    Pick a PDF from your computer. Only PDF works — no Word, Excel, or images.
+  </Step>
+  <Step title="Watch the progress bar">
+    Shows the upload percentage.
+  </Step>
+  <Step title="If the PDF needs a password">
+    A password field appears. Type it and continue.
+  </Step>
+  <Step title="Wait for analysis">
+    A spinner appears with elapsed seconds. Usually 30–90 seconds depending on statement size.
+  </Step>
+  <Step title="Done">
+    The new report shows up in the left panel and opens automatically on the right.
+  </Step>
+</Steps>
+
+<Warning>
+  Don't close the browser tab while it's analysing. You'll lose your spot and have to upload again.
+</Warning>
+
+## How to read the analysis (3 tabs)
+
+The right panel has **three tabs**: Lead Summary, DSA Matrix, Transactions.
+
+### Tab 1: Lead Summary
+
+This is the executive overview. You'll spend most of your time here.
+
+**Account & Statement card**
+- Account holder name, bank, account type, account number, IFSC.
+- Statement period — what dates the statement covers.
+- Days since the last transaction.
+- A **freshness** badge:
+  - 🟢 **Fresh** — recent, lenders are happy
+  - 🟠 **Acceptable** — okayish
+  - 🔴 **Stale** or **Very Stale** — too old, lenders get nervous
+
+**Financial Metrics card**
+- Total credits and debits over the statement period.
+- Average monthly inflow, outflow, and surplus.
+- Opening and closing balances.
+
+**Turnover table**
+- Total / 3-month / 6-month turnover, both with and without "deposits" (so you can see real business activity vs. one-off transfers).
+
+**Flags card**
+- Bounce counts for the last 3 months, 6 months, and 12 months. Red badges if there are any.
+- **Warnings** — red badges for problems found in the statement. Says "None" in green if the statement is clean.
+- **Declining items** — orange badges for trends that are getting worse over time.
+
+### Tab 2: DSA Matrix
+
+DSA stands for **Data Sufficiency Assessment** — basically, "did the AI find enough information to make a confident decision?"
+
+**Top of the tab:**
+- Pass / Fail / Warn / Info badge counts.
+- A green "ALL CLEAR / PASSED" banner if everything's good, or a red banner with the first issue if not.
+
+**The Checks table:**
+| Column | What it means |
+|---|---|
+| **#** | Check number |
+| **Metric** | What was checked (e.g., "Average monthly surplus") |
+| **Value** | The result |
+| **Priority** | 🔴 Critical, 🟠 High, 🟡 Medium, 🔵 Low/Observe |
+| **Signal** | 🟢 Pass, 🔴 Fail, 🟡 Warn, 🔵 Info |
+| **Note** | A short explanation |
+
+For underwriters, this is the most important tab. Scan for any **red Fail** signals in **Critical** or **High** priority — those are the must-fix issues.
+
+### Tab 3: Transactions
+
+Every transaction in the statement, in a scrollable table.
+
+| Column | What |
+|---|---|
+| **Date** | When the transaction happened |
+| **Description** | What the transaction was for |
+| **Debit** (red) | Money going out |
+| **Credit** (green) | Money coming in |
+| **Balance** | Account balance after that transaction |
+
+Only the first 50 rows load to keep things fast. Tap **Load More** at the bottom for more. When you reach the end, you'll see "End of transactions."
+
+## Common workflows
+
+### Quick credit decision
+
+<Steps>
+  <Step title="Open the report">
+    Click the customer's name in the left panel.
+  </Step>
+  <Step title="Stay on Lead Summary">
+    Look at **Average Monthly Surplus** — positive is good.
+  </Step>
+  <Step title="Check Freshness">
+    Green = recent, red = too old.
+  </Step>
+  <Step title="Check Flags">
+    Any red warnings or bounce counts above zero? That's a no-go.
+  </Step>
+</Steps>
+
+### Underwriter deep-dive
+
+<Steps>
+  <Step title="Click the DSA Matrix tab">
+  </Step>
+  <Step title="Look at the recommendation banner">
+    Green = approve, red = needs review.
+  </Step>
+  <Step title="Scan for red Fail signals on Critical/High priority rows">
+  </Step>
+  <Step title="Read the Notes column">
+    Each Note explains why that check failed.
+  </Step>
+</Steps>
+
+### Audit a specific transaction
+
+<Steps>
+  <Step title="Click the Transactions tab">
+  </Step>
+  <Step title="Scroll through dates and descriptions">
+  </Step>
+  <Step title="Click 'Load More' if you need older entries">
+  </Step>
+</Steps>
+
+## Download a saved report
+
+<Steps>
+  <Step title="In the left panel, find the report">
+  </Step>
+  <Step title="Tap the small download icon on its right">
+    The original PDF downloads.
+  </Step>
+</Steps>
+
+## Common things people ask
+
+<AccordionGroup>
+  <Accordion title="My PDF won't upload.">
+    Three things to check: (1) Is it really a PDF? (2) Is it password-protected? Try entering the password when prompted. (3) Is your internet on?
+  </Accordion>
+  <Accordion title="The statement says 'Stale' — is that bad?">
+    Yes. Most lenders want statements no older than 30–60 days. Ask the customer for a fresh one.
+  </Accordion>
+  <Accordion title="There's one bounce in 12 months — is that a deal-breaker?">
+    Depends on your team's policy. Ask your manager. The app flags it so you don't miss it; the call is yours.
+  </Accordion>
+  <Accordion title="The Transactions tab takes forever to load.">
+    Only the first 50 rows load. Click 'Load More' for additional pages.
+  </Accordion>
+  <Accordion title="What's a 'declining item'?">
+    Something that used to be high and is going down — like monthly turnover dropping over the last 6 months. Could mean the business is shrinking.
+  </Accordion>
+</AccordionGroup>

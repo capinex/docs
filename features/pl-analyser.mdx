@@ -1,0 +1,160 @@
+---
+title: "PL Analyser"
+description: "Upload a personal bank statement PDF. See salary, EMIs, charges, FOIR (lending capacity), and high-value transactions."
+icon: "building-columns"
+---
+
+PL Analyser stands for **Personal Loan Analyser**. You upload a customer's personal bank statement PDF and the app pulls out everything you need to make a personal-loan decision: salary deposits, EMI payments, bank charges, monthly cash flow, and most importantly the **FOIR** (their lending capacity).
+
+<Note>
+  This feature only works on a laptop or desktop with a screen at least 1100 pixels wide.
+</Note>
+
+## What is FOIR?
+
+FOIR = **Fixed Obligation Income Ratio**. It's the percentage of monthly income already going to existing EMIs. Lenders use it to decide if the customer can take on another loan.
+
+- Lower FOIR = more borrowing capacity = more likely to be approved.
+- Higher FOIR = the customer is already stretched thin = risky to lend more.
+
+The app calculates this for you automatically.
+
+## The home screen
+
+Two side-by-side panels:
+
+- **Left — Saved Reports**: a list of every PDF analysed before. Each row shows the account holder name and the upload date.
+- **Right — Report Details**: empty until you pick a report. Tap a saved report on the left to see its details.
+
+A button at the top right says **Upload Bank Statement**.
+
+## How to upload a new statement
+
+<Steps>
+  <Step title="Tap 'Upload Bank Statement'">
+    A dialog opens.
+  </Step>
+  <Step title="Tap 'Pick & Upload'">
+    Pick a PDF from your computer. PDF only.
+  </Step>
+  <Step title="Watch the upload progress bar">
+    It fills from 0% to 100%.
+  </Step>
+  <Step title="Wait for the analysis">
+    A spinner shows the elapsed time. Usually 5 to 30 seconds.
+  </Step>
+  <Step title="Done">
+    The report appears on the right and is added to the saved list on the left.
+  </Step>
+</Steps>
+
+## How to read the analysis
+
+When you tap a saved report, the right panel shows:
+
+### Average FOIR (top of the panel)
+
+A big box showing the customer's average FOIR across the statement period. Click the number to copy it (handy for pasting into your CRM).
+
+### Month-on-Month FOIR
+
+A row of cards, one per month, showing the FOIR percentage for each month. This tells you if their cash flow is stable, improving, or deteriorating.
+
+### Salary Details
+
+- How many salary credits the bank found.
+- The total amount.
+- Each individual salary deposit (date and amount).
+
+### EMI Details
+
+- All loan and credit-card EMI payments.
+- Each payment is listed separately so you can see what they're already paying.
+
+### Charges & Fees
+
+- Bank charges, service fees, NEFT/IMPS charges, etc.
+- High charges can be a sign the customer is short on money.
+
+### High-Value Credits
+
+If the statement has unusually large deposits (more than 2× the average), they show here. Could be:
+- A salary bonus
+- A loan from someone else
+- A one-off transfer
+
+Worth asking the customer about these.
+
+## How to download the analysed report
+
+<Steps>
+  <Step title="Find the report in the left panel">
+  </Step>
+  <Step title="Tap the download icon on its right">
+    A PDF with all the analysis downloads.
+  </Step>
+</Steps>
+
+## Common workflows
+
+### Decide if a customer qualifies for a personal loan
+
+<Steps>
+  <Step title="Upload their last 6 months' statement">
+  </Step>
+  <Step title="Open the report and look at Average FOIR">
+    If it's already 50%+, taking on more loan is risky.
+  </Step>
+  <Step title="Check Salary Details">
+    Are salary deposits regular? Same amount each month?
+  </Step>
+  <Step title="Look at the trend in Month-on-Month FOIR">
+    Going up? Their burden is increasing — be careful.
+  </Step>
+</Steps>
+
+### Verify a customer's claimed income
+
+<Steps>
+  <Step title="Upload statement">
+  </Step>
+  <Step title="Scroll to Salary Details">
+    See actual deposits.
+  </Step>
+  <Step title="Compare to what they told you">
+    If they said "₹1L per month" but you see ₹40K, ask them about the gap.
+  </Step>
+</Steps>
+
+### Check existing EMI burden
+
+<Steps>
+  <Step title="Open report → EMI Details">
+  </Step>
+  <Step title="Add up the recurring monthly amounts">
+  </Step>
+  <Step title="Compare with salary">
+    EMI total ÷ salary = current FOIR. The app shows this for you.
+  </Step>
+</Steps>
+
+## Tip: copy values quickly
+
+Almost every number on the screen is **clickable**. Tap a number — it copies to your clipboard. Then paste into your CRM, your email, or wherever.
+
+## Common things people ask
+
+<AccordionGroup>
+  <Accordion title="The PDF won't analyse.">
+    Three checks: (1) Is it a real PDF, not a scan or image? (2) Is the file corrupted? (3) Is your internet on?
+  </Accordion>
+  <Accordion title="No salary credits showed up.">
+    The AI looks for regular monthly deposits with consistent amounts. If the customer's "salary" is just transfers from a friend, the app won't classify it as salary.
+  </Accordion>
+  <Accordion title="What's a good FOIR?">
+    Below 40% is healthy. 40–55% is moderate (proceed with caution). Above 55% means they're already stretched — likely a no-go for additional unsecured loans.
+  </Accordion>
+  <Accordion title="The High-Value Credits section shows lots of entries.">
+    The customer has irregular income. Get more details from them — could be a freelancer with project payments, or could be a red flag.
+  </Accordion>
+</AccordionGroup>

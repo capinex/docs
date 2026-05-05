@@ -1,0 +1,66 @@
+{
+  "$schema": "https://mintlify.com/docs.json",
+  "theme": "luma",
+  "name": "Capinex Finance — User Guide",
+  "description": "Step-by-step guide for the Capinex Finance app. Written for sales teams.",
+  "colors": {
+    "primary": "#1E212D",
+    "light": "#155DFC",
+    "dark": "#0B0E1A"
+  },
+  "navigation": {
+    "groups": [
+      {
+        "group": "Welcome",
+        "pages": [
+          "introduction",
+          "getting-started/sign-in",
+          "getting-started/menu-tour"
+        ]
+      },
+      {
+        "group": "Find & manage customers",
+        "pages": [
+          "features/customer-profile",
+          "features/loan-applications",
+          "features/manage-uploads"
+        ]
+      },
+      {
+        "group": "Analyse documents",
+        "pages": [
+          "features/bl-analyser",
+          "features/pl-analyser",
+          "features/cibil-report",
+          "features/credit-reports"
+        ]
+      },
+      {
+        "group": "For admins",
+        "pages": [
+          "admin/access-control",
+          "admin/field-management",
+          "admin/settings"
+        ]
+      },
+      {
+        "group": "Help",
+        "pages": [
+          "help/sign-out",
+          "help/troubleshooting"
+        ]
+      }
+    ]
+  },
+  "navbar": {
+    "links": [
+      {
+        "label": "Open the app",
+        "href": "https://app.capinex.in"
+      }
+    ]
+  },
+  "footer": {
+    "socials": {}
+  }
+}

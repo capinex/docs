@@ -1,0 +1,158 @@
+---
+title: "Field Management"
+description: "Decide which fields appear in the customer table, search, and exports. Add custom fields. Super Admin only."
+icon: "sliders"
+---
+
+Field Management is the schema editor for your team. You decide what data the app collects, how it's labelled, which fields appear in search, in the customer table, and in exports.
+
+<Note>
+  Super Admin only. If you don't see this in the sidebar, your role doesn't include it.
+</Note>
+
+## What you see
+
+At the top: a count like "268 fields defined | 45 shown" and three buttons:
+
+- **Seed All Default Fields** (only appears if your database is empty) — adds 260+ standard fields in one click.
+- **Seed Defaults** (appears once you have fields) — adds any standard fields you might be missing, without duplicating existing ones.
+- **Add Field** — opens a form to create a new custom field.
+
+Below that:
+- A **search box** — type to filter fields by name or display name.
+- **Group filter chips** — All / Core / Cibil / Custom.
+
+The main table has columns:
+
+| Column | What |
+|---|---|
+| **Field Name** | The internal name (lowercase, snake_case). Don't show this to customers. |
+| **Display Name** | What appears in the UI. |
+| **Group** | Core (built-in), Cibil (credit-bureau), or Custom (you made it). |
+| **Data Type** | String, Decimal, Date, or whole number. |
+| **Keywords** | Tags the AI uses to auto-map Excel uploads. |
+| Icons for | Required • Visible • Filterable • Exportable |
+| **Edit** | Pencil icon. |
+| **Delete** | Red bin icon — only shows up for custom fields. Core fields can't be deleted. |
+
+## Common workflows
+
+### First-time setup — seed all default fields
+
+<Steps>
+  <Step title="Tap 'Seed All Default Fields'">
+    The button only shows when the database has no fields yet.
+  </Step>
+  <Step title="Wait — it adds 260+ standard fields">
+    A success message tells you the count.
+  </Step>
+  <Step title="Done">
+    Your team now has the standard set: name, phone, PAN, CIBIL fields, account fields, etc.
+  </Step>
+</Steps>
+
+### Add a custom field
+
+<Steps>
+  <Step title="Tap 'Add Field'">
+    A form opens.
+  </Step>
+  <Step title="Fill in the basics">
+    - **Field Name** — `monthly_rent` (lowercase, snake_case, no spaces)
+    - **Display Name** — `Monthly Rent` (what people see)
+    - **Description** — short explanation
+    - **Sample Value** — example data
+  </Step>
+  <Step title="Pick a data type">
+    String / Decimal / Date / Whole number. Pick once — you can't change it later.
+  </Step>
+  <Step title="Pick a group">
+    "Custom" for your own fields.
+  </Step>
+  <Step title="Tick the flags you want">
+    - **Required** — must be filled in
+    - **Visible in Table** — shows up in the Customer Profile table
+    - **Filterable** — can be used in search filters
+    - **Exportable** — included when exporting data
+    - **Searchable** — indexed for text search
+  </Step>
+  <Step title="Add keywords (optional)">
+    Comma-separated. Helps the AI auto-map Excel column headers when you bulk-upload.
+  </Step>
+  <Step title="Tap 'Create'">
+    The field is now live across the app.
+  </Step>
+</Steps>
+
+### Make a field visible in the customer table
+
+<Steps>
+  <Step title="Search for the field">
+    Type its name in the search box.
+  </Step>
+  <Step title="Tap the edit icon (pencil)">
+  </Step>
+  <Step title="Tick 'Visible in Table'">
+  </Step>
+  <Step title="Tap Save">
+    The field shows up as a column in Customer Profile.
+  </Step>
+</Steps>
+
+### Delete a custom field
+
+<Steps>
+  <Step title="Find the field">
+    Filter by Group: Custom, then search.
+  </Step>
+  <Step title="Tap the red bin icon">
+    A confirmation appears.
+  </Step>
+  <Step title="Confirm">
+    The field is removed.
+  </Step>
+</Steps>
+
+<Warning>
+  Core fields don't have a delete button — you can't remove them. They're built into the app.
+</Warning>
+
+## What the flags do, in plain English
+
+<CardGroup cols={2}>
+  <Card title="Required" icon="asterisk">
+    The field can't be left blank. The app will refuse to save a record without it.
+  </Card>
+  <Card title="Visible in Table" icon="eye">
+    Adds the field as a column in the Customer Profile table.
+  </Card>
+  <Card title="Filterable" icon="filter">
+    Lets users use this field in the Filter panel (e.g., "Monthly Rent above ₹20,000").
+  </Card>
+  <Card title="Exportable" icon="file-export">
+    Includes this field when someone exports the table to Excel.
+  </Card>
+  <Card title="Searchable" icon="magnifying-glass">
+    Indexes the field for text search and natural-language queries.
+  </Card>
+</CardGroup>
+
+## Common things people ask
+
+<AccordionGroup>
+  <Accordion title="What's the difference between Field Name and Display Name?">
+    **Field Name** is internal — short, lowercase, used by the database (`monthly_rent`). **Display Name** is what users see in the UI (`Monthly Rent`). Field Name can't change after creation; Display Name can.
+  </Accordion>
+  <Accordion title="I want to rename a field after creating it.">
+    Edit it and change the **Display Name** — that's safe. The internal Field Name is locked, so the database stays consistent.
+  </Accordion>
+  <Accordion title="What happens to existing data if I add a new field?">
+    Existing records show blank for the new field. New uploads can fill it in.
+  </Accordion>
+  <Accordion title="What are 'keywords' for?">
+    When someone uploads an Excel file in Loan Applications, the app tries to auto-match Excel column headers to your fields. Keywords are extra hints. For a `monthly_rent` field, keywords could be `rent, lease, housing cost`.
+  </Accordion>
+  <Accordion title="I tapped 'Seed Defaults' and it said 'Skipped 100 existing'.">
+    That means 100 of the standard fields were already in your database. The seed only added the missing ones. Nothing was overwritten.
+  </Accordion>
+</AccordionGroup>

@@ -1,0 +1,145 @@
+---
+title: "Settings"
+description: "Pick the AI model used for natural-language search. Read the audit log of every action in the app. Super Admin only."
+icon: "gear"
+---
+
+Settings has two halves:
+
+- **AI Configuration** at the top — pick which AI brain runs the natural-language search across the app, and edit the prompt that tells it how to behave.
+- **Audit Logs** at the bottom — every action anyone has taken in the app, with timestamps, user emails, and IP addresses.
+
+<Note>
+  Super Admin only. If you don't see Settings in the sidebar, your role doesn't include it.
+</Note>
+
+## AI Configuration
+
+This controls the AI used by every "Search with AI" or natural-language query in the app — Customer Profile search, Loan Applications search, etc.
+
+### What you see
+
+- **AI Model dropdown** — six Gemini models to choose from:
+  - `gemini-flash-latest` — fastest, cheapest. Good for short queries.
+  - `gemini-pro-latest` — slower, more accurate. Better for complex questions.
+  - Plus other Gemini variants.
+- **System Prompt** — a 15-line text box. This is the instruction sheet for the AI: how to convert "show me high-income customers" into a database query. Most teams leave this alone unless they want to change the AI's behavior.
+- **Reset button** — discards your edits and reloads the saved version.
+- **Save Changes button** — applies your edits. **Effective immediately for all users.**
+
+### How to switch the AI model
+
+<Steps>
+  <Step title="Open the AI Model dropdown">
+  </Step>
+  <Step title="Pick a model">
+    `gemini-flash-latest` for speed, `gemini-pro-latest` for accuracy.
+  </Step>
+  <Step title="Tap 'Save Changes'">
+    Every user's next search uses the new model.
+  </Step>
+</Steps>
+
+### How to edit the AI prompt
+
+<Warning>
+  Changing the prompt affects every user **immediately**. Test in low-stakes hours and have someone double-check.
+</Warning>
+
+<Steps>
+  <Step title="Click in the System Prompt text area">
+  </Step>
+  <Step title="Edit carefully">
+    The prompt tells the AI how to translate plain English into database queries. If it's wrong, all AI searches will return weird results.
+  </Step>
+  <Step title="Tap 'Save Changes'">
+  </Step>
+  <Step title="Test in Customer Profile or Loan Applications">
+    Run a known query and check the results.
+  </Step>
+  <Step title="If something's broken, tap 'Reset'">
+    It reverts to the last saved version.
+  </Step>
+</Steps>
+
+## Audit Logs
+
+A scrollable record of every important action your team has done — sign-ins, role changes, data exports, field edits, AI queries, etc.
+
+### What you see
+
+- **Action filter dropdown** — narrow the log to one event type (e.g., `leads_exported`, `user_access_changed`).
+- **Refresh icon** — reload the latest entries.
+- **Log table** with columns:
+  - **Time** — when it happened
+  - **Action** — what happened, colour-coded:
+    - 🔴 Red — deletes
+    - 🟠 Orange — auth (sign-in, sign-out, OTP)
+    - 🔵 Blue — admin actions
+    - 🟣 Purple — AI queries
+    - 🌊 Teal — exports
+    - 🟢 Green — creates
+  - **User** — the email of who did it
+  - **Target** — what was affected (e.g., a field name, a customer ID)
+  - **Details** — extra context (sometimes empty)
+  - **IP** — the user's IP address (or "—" if not recorded)
+- **Pagination** at the bottom — Previous / Page X / Next.
+
+### Common workflows
+
+#### Find what an admin did today
+
+<Steps>
+  <Step title="Open the Action filter">
+  </Step>
+  <Step title="Pick 'admin_user_updated' or 'user_access_changed'">
+  </Step>
+  <Step title="Browse the rows for today's date">
+    Each shows who changed what.
+  </Step>
+</Steps>
+
+#### Investigate a failed export
+
+<Steps>
+  <Step title="Open the Action filter">
+  </Step>
+  <Step title="Pick 'leads_exported'">
+  </Step>
+  <Step title="Find the user and timestamp">
+  </Step>
+  <Step title="Read the Details column">
+    If something failed, the message will be there.
+  </Step>
+</Steps>
+
+#### Verify someone signed in successfully
+
+<Steps>
+  <Step title="Filter by 'otp_verified' or sign-in events">
+  </Step>
+  <Step title="Find the user's email">
+  </Step>
+  <Step title="Confirm the timestamp matches what they told you">
+  </Step>
+</Steps>
+
+## Common things people ask
+
+<AccordionGroup>
+  <Accordion title="Can I edit or delete log entries?">
+    No. Logs are append-only by design — once written, they can't be tampered with. This is for compliance.
+  </Accordion>
+  <Accordion title="How far back do logs go?">
+    All the way to the start of your team's account. The Audit Logs section paginates 50 entries at a time, so use the filter to narrow down.
+  </Accordion>
+  <Accordion title="The IP column shows '—'.">
+    Some events don't record an IP (especially older ones). Recent events should have it.
+  </Accordion>
+  <Accordion title="I changed the AI prompt and now searches are returning weird results.">
+    Tap **Reset** in the AI Configuration section to discard your unsaved changes. If you'd already saved a bad prompt, paste back a known-good prompt from a backup and Save again.
+  </Accordion>
+  <Accordion title="Which AI model should I pick?">
+    Default to `gemini-flash-latest` for everyday use — it's fast and good enough for most queries. Switch to `gemini-pro-latest` if your team's queries are getting wrong results often.
+  </Accordion>
+</AccordionGroup>

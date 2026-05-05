@@ -1,0 +1,194 @@
+---
+title: "Loan Applications"
+description: "Search loan applications by form number, date, or filters. Upload bulk data. Use AI to ask in plain English."
+icon: "file-signature"
+---
+
+This is the big database of every loan application your team is working on. You can search by form number, narrow by date or filters, ask questions in plain English, and (if you're a Super Admin) upload Excel files with hundreds of new applications at once.
+
+## The home screen
+
+When you tap **Loan Applications**, you see:
+
+- A title at the top: "Customer Applications"
+- For Super Admins, four buttons: **Storage indicator**, **Manage Uploads**, **Export Data**, **Upload File**
+- A big middle area that says "Search to View Applications" — you have to search before anything shows
+- Three quick buttons: **Today**, **This Week**, **This Month**
+- A search bar with date range pickers and a filter button
+
+The table is empty until you search. That's normal.
+
+## How to search by application number
+
+<Steps>
+  <Step title="Tap the search box">
+    It says "Search by Application Form #".
+  </Step>
+  <Step title="Type the form number">
+    Example: `APP-12345`. Partial matches work too.
+  </Step>
+  <Step title="Tap the search button (or press Enter)">
+    Wait for the spinner to finish.
+  </Step>
+  <Step title="The table shows the matching applications">
+    Three coloured stat cards appear above: Total EMI, Total Sanctioned Amount, Total POS.
+  </Step>
+</Steps>
+
+## How to search by date
+
+<Steps>
+  <Step title="Pick a quick range">
+    Tap **Today**, **This Week**, or **This Month** to fill the dates for you.
+  </Step>
+  <Step title="Or pick custom dates">
+    Tap **From Date** → choose a date. Tap **To Date** → choose. Both are inclusive.
+  </Step>
+  <Step title="Tap Search">
+    The table shows every application opened in that range.
+  </Step>
+</Steps>
+
+<Tip>
+  Tap the small **X** next to a date to clear it.
+</Tip>
+
+## How to use filters
+
+<Steps>
+  <Step title="Tap the Filter button">
+    A panel opens with seven filter fields:
+    - **Facility** — Personal Loan, Home Loan, Auto Loan, Credit Card, Business Loan, Gold Loan, Education Loan
+    - **Phone** — partial number match
+    - **Institution** — bank name (e.g. "HDFC")
+    - **Account number** — partial match
+    - **EMI** — min and max
+    - **POS** — min and max
+    - **Sanctioned Amount** — min and max
+  </Step>
+  <Step title="Set the values you need">
+    Leave the rest blank.
+  </Step>
+  <Step title="Tap Apply">
+    The table refreshes with only matching applications.
+  </Step>
+</Steps>
+
+<Note>
+  The Filter button shows a small badge with the number of active filters (e.g. `3` if you've set Facility + EMI + Phone).
+</Note>
+
+To clear all filters, tap **Clear Filters** (it appears next to Refresh after you've searched).
+
+## How to ask in plain English (AI Search)
+
+<Steps>
+  <Step title="Tap 'Search with AI'">
+    The button has a purple gradient. A dialog opens.
+  </Step>
+  <Step title="Type your question">
+    Examples:
+    - `Show all home loans above 50 lakhs`
+    - `Find HDFC bank loans from this year`
+    - `Total EMI this month`
+    - `Unsecured loans count`
+  </Step>
+  <Step title="Or use voice">
+    Tap the microphone button. The button shows "Listening..." — speak your question, then tap Stop.
+  </Step>
+  <Step title="Tap the search button in the dialog">
+    The AI shows you the SQL it generated (you can ignore it) and a green box: "Found X results."
+  </Step>
+  <Step title="Tap 'View Results'">
+    The dialog closes and the main table fills with what the AI found.
+  </Step>
+</Steps>
+
+<Tip>
+  Below the search field, the dialog has clickable example chips: "Show all personal loans", "Loans above 10 lakhs", etc. Tap one to fill the search box.
+</Tip>
+
+## How to read the table
+
+Each row is one loan application. The columns are:
+
+| Column | What it means |
+|---|---|
+| **Application Form Number** | The unique ID for that loan |
+| **Phone Number** | The applicant's phone |
+| **Sanctioned Amount** | How much was approved |
+| **Open Date** | When the loan started |
+| **Facility** | The type of loan (Personal, Home, Auto, etc.) |
+| **EMI** | The monthly instalment |
+| **POS** | Point-of-sale value |
+| **Action** | Quick links to view or edit |
+
+The table is sortable — tap a column header to sort by that column. Below the table, you can choose how many rows per page (10, 20, or 50).
+
+## Upload Excel files (Super Admins only)
+
+<Steps>
+  <Step title="Tap 'Upload File'">
+    A dialog opens.
+  </Step>
+  <Step title="Tap 'Pick & Upload'">
+    Pick a `.xlsx` or `.xls` file from your computer.
+  </Step>
+  <Step title="Watch the progress bar">
+    It shows the upload percentage. When it hits 100%, you'll see "Processing on server..."
+  </Step>
+  <Step title="Review the field mapping">
+    The app auto-matches your Excel column headers to its fields. You'll see:
+    - **Green badge** if every core field is mapped — good to go.
+    - **Orange badge** if some fields aren't mapped — fix them with the dropdowns shown.
+  </Step>
+  <Step title="Fix any unmapped fields">
+    For each unmapped core field, pick the matching column from the Excel using the dropdown.
+  </Step>
+  <Step title="Tap Upload">
+    A snackbar pops up: "X rows queued for processing." Done.
+  </Step>
+</Steps>
+
+<Warning>
+  If your Excel is missing a required core field (like the Unique ID), the upload won't go through. Either fix the file or map a different column.
+</Warning>
+
+<Tip>
+  Tap **Download Sample Template** in the dialog to get a starter Excel file with the right column headers.
+</Tip>
+
+## Export the search results
+
+Once you've searched, the **Export Data** button (top of the page, Super Admins only) is enabled. Tap it to download a file of everything currently in the table.
+
+<Note>
+  Export only works after you've searched at least once. If the table is empty, the button stays disabled.
+</Note>
+
+## Manage past uploads
+
+To see what you've uploaded before:
+
+<Steps>
+  <Step title="Tap 'Manage Uploads'">
+    Opens the Manage Uploads page. See [Manage Uploads](/features/manage-uploads).
+  </Step>
+</Steps>
+
+## Common things people ask
+
+<AccordionGroup>
+  <Accordion title="The table is empty after I tap a quick filter.">
+    No applications opened in that range. Try a wider date.
+  </Accordion>
+  <Accordion title="I uploaded a file but nothing shows up in the table.">
+    The upload runs in the background. Wait a minute, then tap Refresh. If it still doesn't show, go to Manage Uploads to check status.
+  </Accordion>
+  <Accordion title="'Storage limit exceeded' error on upload.">
+    Your team's storage is full. Ask a Super Admin to clear old uploads from Manage Uploads.
+  </Accordion>
+  <Accordion title="The AI gave me wrong results.">
+    Try rephrasing your question more simply. Or use the Filter panel for exact matches.
+  </Accordion>
+</AccordionGroup>

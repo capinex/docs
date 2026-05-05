@@ -1,0 +1,193 @@
+---
+title: "Customer Profile"
+description: "Search any customer. See their credit score, income, loans, and past dues. Bulk-upload customer data."
+icon: "user-magnifying-glass"
+---
+
+This is where you find customers. Type a name, a phone number, or even a question in plain English, and the app shows you matching profiles with their credit score, age, income, loans, and past dues.
+
+## The home screen
+
+When you tap **Customer Profile** in the sidebar, you see:
+
+- A big search bar in the middle that says "Search or ask in natural language..."
+- A small **+** button on its left.
+- A microphone icon on the right (for voice search).
+- A search arrow on the far right.
+
+That's it. Everything starts here.
+
+## How to find a customer
+
+<Steps>
+  <Step title="Type into the search bar">
+    Type any of these:
+    - A name: `Ramesh Kumar`
+    - A phone number: `9876543210`
+    - A question: `show me high-income customers with no past dues`
+  </Step>
+  <Step title="Tap the search arrow on the right">
+    Or just press Enter on your keyboard.
+  </Step>
+  <Step title="See the results">
+    A table appears with up to 11 columns: Name, Phone, CIBIL, Age, Gender, PAN, Income, Active loans, Outstanding, Past Due, Status.
+  </Step>
+</Steps>
+
+<Tip>
+  You can ask in plain Hindi-English mix too. The app understands "loan over 5 lakhs" or "high CIBIL no overdue".
+</Tip>
+
+## How to use voice search
+
+<Steps>
+  <Step title="Tap the microphone icon">
+    First time, the browser will ask for microphone permission. Click **Allow**.
+  </Step>
+  <Step title="Speak clearly">
+    "Show me customers with score above 750 and active home loan."
+  </Step>
+  <Step title="Wait — the words appear in the search bar">
+    Tap the search arrow to run it.
+  </Step>
+</Steps>
+
+## How to filter
+
+<Steps>
+  <Step title="Tap the + button (left of the search bar)">
+    A small menu pops up with two options: **Filters** and **Upload Data**.
+  </Step>
+  <Step title="Tap 'Filters'">
+    A panel opens with these filters:
+    - **Name** — text
+    - **Phone Number** — digits
+    - **CIBIL Score** — min and max numbers
+    - **Monthly Income** — min and max in rupees
+    - **Gender** — Male / Female / Other
+    - **Active Loans** — All / Has loans / No loans
+    - **Past Due** — All / No dues / Has dues
+    - **Status** — All / Approved / Rejected / Pending / etc.
+    - **Limit** — 50 / 1000 / 10000 / All results
+  </Step>
+  <Step title="Set the filters you need">
+    You can set as many as you want. They all apply together (AND).
+  </Step>
+  <Step title="Tap Search">
+    Active filters appear as small chips above the table. Tap the X on a chip to remove that filter.
+  </Step>
+</Steps>
+
+<Note>
+  Range filters (CIBIL, Income) work even if you only fill one side. Min only = "above this number." Max only = "below this number."
+</Note>
+
+## How to read the table
+
+Each row is one customer. From left to right:
+
+| Column | What it means |
+|---|---|
+| **Name** | Tap it (it's blue) to open the CAM Report tab for that customer |
+| **Phone** | Their main phone number |
+| **CIBIL** | Their credit score (300–900). Higher is better. |
+| **Age** | Calculated from date of birth |
+| **Gender** | M / F / O |
+| **PAN** | Their PAN card number |
+| **Income** | Their monthly income |
+| **Active** | How many loans they currently have running |
+| **Outstanding** | How much money they still owe across all loans |
+| **Past Due** | How much they're overdue on |
+| **Status** | A dropdown — change it to set the customer's status |
+
+The far-right of each row has a **copy icon** — tap to copy the entire row as text (handy for pasting into emails or notes).
+
+## Change a customer's status
+
+<Steps>
+  <Step title="Find the customer in the table">
+  </Step>
+  <Step title="Tap the Status dropdown in their row">
+    Pick the new status (Approved, Rejected, Pending, etc.).
+  </Step>
+  <Step title="Done — it saves immediately">
+    No "save" button. The new status is live.
+  </Step>
+</Steps>
+
+## Open the CAM Report
+
+The CAM Report is a chat where you can ask questions about that customer's credit and lending fit.
+
+<Steps>
+  <Step title="Tap the customer's name (blue) in the table">
+  </Step>
+  <Step title="The CAM Report tab opens">
+    You can type questions like "Is this customer fit for a 5-lakh personal loan?" and get an instant answer based on their data.
+  </Step>
+</Steps>
+
+<Warning>
+  If you switch tabs or go back to search, your selected customer is forgotten. You'll need to re-select them.
+</Warning>
+
+## Bulk-upload customer data
+
+If you have a spreadsheet of customer info, you can upload it instead of typing each customer manually.
+
+<Steps>
+  <Step title="Tap the + button (left of search bar)">
+  </Step>
+  <Step title="Tap 'Upload Data'">
+    A list of 9 categories appears.
+  </Step>
+  <Step title="Pick the category that matches your file">
+    | Category | What's in it |
+    |---|---|
+    | Personal | Name, DOB, Gender |
+    | Phone Numbers | Customer ID, phone |
+    | Email Addresses | Customer ID, email |
+    | Addresses | Customer ID, address, pincode |
+    | Identity | PAN, Voter ID, Passport, UID |
+    | CIBIL Score | Customer ID, score |
+    | Employment / Bank | Income, bank type |
+    | Loan Enquiries | Enquiry purpose, amount, date |
+    | Account Records | Loan amount, balance, DPD |
+  </Step>
+  <Step title="Each category shows the columns it expects">
+    Read the description before picking your file.
+  </Step>
+  <Step title="Tap the row, pick your CSV or Excel file">
+    A spinner appears while it uploads.
+  </Step>
+  <Step title="Wait for the green checkmark">
+    Done. The new data is searchable instantly.
+  </Step>
+</Steps>
+
+<Warning>
+  Your file's columns must match the category exactly. If they don't, the upload fails. Match column names to what the description says.
+</Warning>
+
+## Pagination — finding more results
+
+The table shows results in pages. Scroll to the bottom to find page numbers (1, 2, 3, ...). Tap a page number to jump to it.
+
+If you set the **Limit** filter to "All", you'll see every match — but the table can be very long.
+
+## Common things people ask
+
+<AccordionGroup>
+  <Accordion title="The search bar is empty but I want to see all customers.">
+    Set the Limit filter to 50 (or whatever number you want), leave every other filter blank, and tap Search.
+  </Accordion>
+  <Accordion title="My voice search isn't working.">
+    Check that the microphone permission is on for the browser. In Chrome: tap the lock icon in the address bar → Site settings → Microphone → Allow.
+  </Accordion>
+  <Accordion title="I changed a customer's status by mistake.">
+    Just change it back via the dropdown. There's no "undo" but the change is one tap.
+  </Accordion>
+  <Accordion title="The natural-language search returned weird results.">
+    The AI does its best but isn't perfect. Try simpler keywords or use the Filters panel for exact matches.
+  </Accordion>
+</AccordionGroup>

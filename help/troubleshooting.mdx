@@ -1,0 +1,114 @@
+---
+title: "Troubleshooting"
+description: "Common problems, fast fixes."
+icon: "wrench"
+---
+
+If something isn't working, scan this list first. Most problems are fixed in under a minute.
+
+## Sign-in problems
+
+<AccordionGroup>
+  <Accordion title="'Access Restricted' after I sign in.">
+    Your account is set up but a Super Admin has switched off your access. Ask a Super Admin to open **Access Control** and turn on the toggle for your row.
+  </Accordion>
+  <Accordion title="'Verify your email' loop.">
+    Check your inbox (and spam folder) for the email Capinex sent. Click the verification link, then come back to the sign-in screen.
+  </Accordion>
+  <Accordion title="I'm signed in to the wrong Google account.">
+    Sign out of Google in your browser, then come back to `app.capinex.in` and pick the right account.
+  </Accordion>
+  <Accordion title="The sign-in page just keeps loading.">
+    Refresh the page. If still loading, check your internet. If still loading, try a different browser (Chrome works best).
+  </Accordion>
+</AccordionGroup>
+
+## Search problems
+
+<AccordionGroup>
+  <Accordion title="Search returns nothing.">
+    - Check your spelling.
+    - Try a shorter, simpler query.
+    - Clear filters (look for active filter chips above the table — tap their X to remove).
+    - Use the **Filter** panel for exact matches instead of natural-language search.
+  </Accordion>
+  <Accordion title="Voice search isn't picking up my voice.">
+    Allow microphone permission. In Chrome: tap the lock icon in the address bar → Site settings → Microphone → Allow. Refresh the page after allowing.
+  </Accordion>
+  <Accordion title="AI search returned wrong-looking results.">
+    The AI isn't perfect. Try rephrasing more simply. Or use the Filter panel for exact matches. If you keep getting bad results, tell a Super Admin — they can switch the AI model in Settings.
+  </Accordion>
+</AccordionGroup>
+
+## Upload problems
+
+<AccordionGroup>
+  <Accordion title="'Storage limit exceeded'.">
+    Your team has hit its storage quota. Ask a Super Admin to open **Manage Uploads** and delete old uploads.
+  </Accordion>
+  <Accordion title="Excel upload says 'Required field not mapped'.">
+    Your file is missing a required column or it's named differently from what the app expects. After picking the file, the dialog shows mapping dropdowns — pick the right column for each unmapped field.
+  </Accordion>
+  <Accordion title="Upload progress bar stops at 100% but never completes.">
+    Wait — once the upload reaches 100%, the server is processing the file. This can take 30 seconds to 2 minutes depending on file size. If it's been more than 5 minutes, refresh and try again.
+  </Accordion>
+</AccordionGroup>
+
+## PDF analyser problems (BL / PL / CIBIL)
+
+<AccordionGroup>
+  <Accordion title="'Please use a larger screen.'">
+    The analyser features need a screen at least 1100 pixels wide. Use a laptop or desktop, not a phone or small tablet.
+  </Accordion>
+  <Accordion title="My PDF won't analyse.">
+    Three checks: (1) Is it a real PDF (not a scanned image)? (2) Is it password-protected? Enter the password when prompted. (3) Is your internet on?
+  </Accordion>
+  <Accordion title="Analysis takes forever.">
+    BL and PL Analyser usually take 30–90 seconds. CIBIL takes about 2 minutes. If it's been more than 5 minutes, refresh and try again.
+  </Accordion>
+  <Accordion title="No salary credits appeared in PL Analyser.">
+    The AI looks for regular monthly deposits with consistent amounts. If the customer's "salary" is one-off transfers, it won't classify them as salary.
+  </Accordion>
+</AccordionGroup>
+
+## Credit Reports CRM problems
+
+<AccordionGroup>
+  <Accordion title="The Credit Reports button doesn't open a tab.">
+    Your browser may be blocking the popup. Tap the **Open Credit Reports** button manually — it always works.
+  </Accordion>
+  <Accordion title="'Session expired. Please relaunch from the Capinex app.'">
+    Sessions last 24 hours. Go back to Capinex Finance, tap **Credit Reports** in the sidebar — a fresh CRM tab opens.
+  </Accordion>
+  <Accordion title="The Export Excel button is missing.">
+    Only Admin and Super Admin roles can export. Ask a Super Admin to upgrade your role.
+  </Accordion>
+</AccordionGroup>
+
+## Admin problems
+
+<AccordionGroup>
+  <Accordion title="I changed someone's role but they don't see new options.">
+    Changes take effect within about 60 seconds. Ask the user to sign out and sign back in to pick up the new role immediately.
+  </Accordion>
+  <Accordion title="I can't switch off my own access in Access Control.">
+    By design — saves you from accidentally locking yourself out. Ask another Super Admin to do it for you.
+  </Accordion>
+  <Accordion title="A field I added isn't showing in the customer table.">
+    Open Field Management, find the field, edit it, tick **Visible in Table**, save. The column appears in Customer Profile.
+  </Accordion>
+</AccordionGroup>
+
+## Still stuck?
+
+<Steps>
+  <Step title="Tap 'Raise a Ticket' at the bottom of the sidebar">
+    A support form opens.
+  </Step>
+  <Step title="Describe what you were doing and what went wrong">
+    Screenshots help.
+  </Step>
+  <Step title="Submit">
+    Someone replies within 48 hours.
+  </Step>
+</Steps>

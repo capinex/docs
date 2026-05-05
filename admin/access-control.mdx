@@ -1,0 +1,123 @@
+---
+title: "Access Control"
+description: "Add and remove team members. Change roles. Block users without deleting them. Super Admin only."
+icon: "user-shield"
+---
+
+Access Control is your team roster. From here, you decide who can use Capinex Finance, what they can do, and who's blocked.
+
+<Note>
+  This menu item only appears for **Super Admins**. If you don't see it in the sidebar, your role doesn't include it.
+</Note>
+
+## What you see
+
+A table with one row per team member. The columns are:
+
+| Column | What |
+|---|---|
+| **User Details** | Their initials avatar, name, and email. You'll see "(You)" next to your own row. |
+| **Role** | A dropdown — User, Admin, or Super Admin. |
+| **Access** | A toggle — green/on means they can log in, grey/off means they're blocked. |
+
+A refresh icon in the top-right reloads the list.
+
+## What each role can do
+
+<CardGroup cols={3}>
+  <Card title="User" icon="user">
+    - Search customers
+    - View loan applications
+    - Run BL/PL/CIBIL analyser
+    - View Credit Reports CRM (read-only — no Excel export)
+  </Card>
+  <Card title="Admin" icon="user-shield">
+    Everything a User can do, plus:
+    - Export data
+    - Download Excel from Credit Reports
+    - Upload Excel files in Loan Applications
+  </Card>
+  <Card title="Super Admin" icon="user-tie">
+    Everything an Admin can do, plus:
+    - Access Control (this page)
+    - Field Management
+    - Settings
+    - Manage uploads (delete old data)
+  </Card>
+</CardGroup>
+
+## Common workflows
+
+### Promote someone to Admin
+
+<Steps>
+  <Step title="Find their row in the table">
+  </Step>
+  <Step title="Tap the Role dropdown">
+  </Step>
+  <Step title="Pick 'Admin'">
+    Saves immediately. They'll see the new privileges next time they refresh.
+  </Step>
+</Steps>
+
+### Block a user temporarily (without deleting)
+
+<Steps>
+  <Step title="Find their row">
+  </Step>
+  <Step title="Toggle the Access switch off">
+    A confirmation appears.
+  </Step>
+  <Step title="Confirm">
+    The user is logged out instantly across all their devices and tabs. They'll see "Access Restricted" if they try to sign in.
+  </Step>
+</Steps>
+
+<Tip>
+  Blocking is reversible. Toggle it back on later and they can use the app again — no need to re-invite.
+</Tip>
+
+### Restore a blocked user's access
+
+<Steps>
+  <Step title="Find their row">
+  </Step>
+  <Step title="Toggle the Access switch on">
+    They can sign in again immediately.
+  </Step>
+</Steps>
+
+### Demote someone
+
+<Steps>
+  <Step title="Find their row">
+  </Step>
+  <Step title="Tap the Role dropdown">
+  </Step>
+  <Step title="Pick a lower role">
+    "User" is the default. The change is instant.
+  </Step>
+</Steps>
+
+## Things you can't do
+
+<Warning>
+  You can't change your own role from Super Admin to anything lower, and you can't switch off your own access. This is to prevent accidentally locking yourself out. If you need to step down, ask another Super Admin to do it for you.
+</Warning>
+
+## Common things people ask
+
+<AccordionGroup>
+  <Accordion title="How do I add a brand-new person to the team?">
+    They sign in to app.capinex.in with their Google account first. Once they've signed in once (and seen "Access Restricted" or "Verify Email"), their row will appear in your table here. Then you flip their access on and pick a role.
+  </Accordion>
+  <Accordion title="What happens if I change someone's role while they're using the app?">
+    The change takes effect within about 60 seconds. The next page they load reflects the new role. If you need it instant, ask them to sign out and back in.
+  </Accordion>
+  <Accordion title="Can I delete a user permanently?">
+    Not from this screen. Use **Block** (toggle off) instead — same effect, and you can always restore them later. To fully delete, ask in #it-support.
+  </Accordion>
+  <Accordion title="Why is the toggle greyed out for my own row?">
+    You can't block yourself. By design — saves you from accidental lockout.
+  </Accordion>
+</AccordionGroup>

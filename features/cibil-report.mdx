@@ -1,0 +1,183 @@
+---
+title: "CIBIL Report"
+description: "Upload a CIBIL credit report PDF. Instantly see the score, accounts, balances, overdues, and risk indicators."
+icon: "credit-card"
+---
+
+CIBIL Report lets you upload a customer's full CIBIL credit report PDF. The app reads it for you and shows the score, all their accounts, payment history, total outstanding, and any red flags — in seconds.
+
+This saves you from scrolling through a 30-page CIBIL report by hand.
+
+<Note>
+  This feature only works on a laptop or desktop with a screen at least 1100 pixels wide.
+</Note>
+
+## The home screen
+
+Two side-by-side panels:
+
+- **Left — Saved Reports**: list of every CIBIL report your team has analysed. Each row shows the customer's name, score in a circle, and the upload date.
+- **Right — Report Details**: empty until you pick a report from the left.
+
+A button at the top right says **Upload New Report**.
+
+## How to upload a new CIBIL report
+
+<Steps>
+  <Step title="Tap 'Upload New Report'">
+    A dialog opens.
+  </Step>
+  <Step title="Tap 'Pick & Upload'">
+    Pick the customer's CIBIL PDF from your computer.
+  </Step>
+  <Step title="Watch the upload progress">
+    The bar fills with the upload percentage.
+  </Step>
+  <Step title="Wait for analysis">
+    Usually about 2 minutes (CIBIL reports are dense). The dialog shows the elapsed time so you know it's working.
+  </Step>
+  <Step title="Done">
+    The dialog closes. The new report appears in the left panel and opens automatically on the right.
+  </Step>
+</Steps>
+
+<Warning>
+  Don't close the browser tab during analysis. Wait for it to finish.
+</Warning>
+
+## How to read the analysis
+
+The right panel has 8 summary cards in a grid:
+
+<CardGroup cols={2}>
+  <Card title="CIBIL Score" icon="gauge-high">
+    The big number — 300 to 900. Higher is better. Plus the customer's name.
+  </Card>
+  <Card title="Total Accounts" icon="layer-group">
+    How many loans/cards they have, with a breakdown of active vs. closed.
+  </Card>
+  <Card title="Total Sanctioned Amount" icon="indian-rupee-sign">
+    Total of every loan amount approved over their history.
+  </Card>
+  <Card title="Current Outstanding Balance" icon="wallet">
+    How much they still owe right now.
+  </Card>
+  <Card title="Total Overdue Amount" icon="triangle-exclamation">
+    Money they should have paid but haven't. Big number = bad.
+  </Card>
+  <Card title="Risk Accounts" icon="ban">
+    Accounts that are settled or written-off. Each is a red flag.
+  </Card>
+  <Card title="Recent Enquiries" icon="magnifying-glass">
+    How many credit checks happened in the last 30 days. Lots = customer is shopping for credit elsewhere.
+  </Card>
+  <Card title="Days Past Due (DPD)" icon="calendar-xmark">
+    Accounts where they're behind on payments.
+  </Card>
+</CardGroup>
+
+## How to read the Accounts table
+
+Below the cards is a table with one row per account (loan, credit card, etc.):
+
+| Column | What it means |
+|---|---|
+| **Account Type** | Personal Loan, Home Loan, Credit Card, etc. |
+| **Opened Date** | When the account started |
+| **Sanctioned Amount** | How much was approved |
+| **Current Balance** | What's still owed |
+| **DPD Status** | Payment behavior — see colour code below |
+| **Account Status** | Active or Closed |
+| **Suit/Write-Off** | Settled, written-off, or under legal action |
+
+### DPD colour code
+
+<CardGroup cols={2}>
+  <Card title="🟢 Standard" icon="circle-check">
+    No payment issues — paying on time.
+  </Card>
+  <Card title="🟡 Sub-Standard" icon="circle-info">
+    Minor delays in past payments.
+  </Card>
+  <Card title="🟠 Doubtful" icon="circle-exclamation">
+    Serious payment delays. Customer is stretched.
+  </Card>
+  <Card title="🔴 Past Due" icon="circle-xmark">
+    Currently behind on payments. Big risk.
+  </Card>
+</CardGroup>
+
+The table is automatically sorted: active accounts first, then closed. Within each group, newest first.
+
+## Common workflows
+
+### Quick credit decision
+
+<Steps>
+  <Step title="Tap a saved report">
+  </Step>
+  <Step title="Look at the CIBIL Score">
+    750+ is excellent. 700–750 is good. Below 650 is risky.
+  </Step>
+  <Step title="Check Total Overdue">
+    Anything above zero is a concern. Big numbers are deal-breakers.
+  </Step>
+  <Step title="Check Risk Accounts">
+    Any settled or written-off? That's a serious red flag.
+  </Step>
+  <Step title="Check Recent Enquiries">
+    Many enquiries in 30 days = customer is desperate for credit. Be cautious.
+  </Step>
+</Steps>
+
+### Audit a customer's loan history
+
+<Steps>
+  <Step title="Open the report">
+  </Step>
+  <Step title="Scroll to the Accounts Table">
+  </Step>
+  <Step title="Look for red or orange DPD statuses">
+  </Step>
+  <Step title="Note any 'Suit/Write-Off' entries">
+    These mean the customer didn't pay back a previous loan.
+  </Step>
+</Steps>
+
+### Compare CIBIL with claimed income
+
+<Steps>
+  <Step title="Calculate utilisation">
+    Outstanding ÷ Sanctioned. If they've used 80%+ of approved credit, they're stretched.
+  </Step>
+  <Step title="Cross-check with the customer's stated salary">
+    Does their EMI burden match?
+  </Step>
+</Steps>
+
+## Download the original PDF
+
+<Steps>
+  <Step title="In the left panel, find the report">
+  </Step>
+  <Step title="Tap the download icon on the right">
+    The original CIBIL PDF downloads.
+  </Step>
+</Steps>
+
+## Common things people ask
+
+<AccordionGroup>
+  <Accordion title="What if the CIBIL score is below 600?">
+    Below 600 is "poor" by industry standards. Most lenders won't approve. Some teams use 550 as their floor — ask your manager.
+  </Accordion>
+  <Accordion title="There's one written-off account from 5 years ago.">
+    Old write-offs are still on the report and still count. The customer may have rebuilt their credit since — look at recent accounts to see if they're paying on time now.
+  </Accordion>
+  <Accordion title="Total Outstanding is high but score is high too.">
+    The customer has lots of credit but pays it on time. Not a red flag. They might just have a big home loan + a credit card with high limit.
+  </Accordion>
+  <Accordion title="The PDF takes really long to analyse.">
+    CIBIL reports are 20–40 pages of dense data. 2 minutes is normal. If it's been 5+ minutes, refresh and try again.
+  </Accordion>
+</AccordionGroup>

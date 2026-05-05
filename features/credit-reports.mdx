@@ -1,0 +1,103 @@
+---
+title: "Credit Reports"
+description: "Open the Capinex CRM dashboard in a new browser tab. Browse and export bureau reports."
+icon: "chart-line"
+tag: "NEW"
+---
+
+Credit Reports is the newest item in your sidebar. It opens the **Capinex CRM dashboard** (a separate web app at `dev.capinex.in`) in a new browser tab. The CRM has a much richer view of bureau reports — searchable, filterable, with exports.
+
+You don't need a separate password. The Capinex Finance app signs you in automatically.
+
+## When to use Credit Reports
+
+Use the Credit Reports CRM when you need to:
+
+- Search across **all** bureau reports (not just one customer)
+- Filter by score range, date, PAN, mobile, name
+- Export results to Excel
+- See enriched data: CAPS history, loan summaries, enquiries
+
+For one specific customer, use [CIBIL Report](/features/cibil-report) inside the main app instead.
+
+## How to open it
+
+<Steps>
+  <Step title="Tap 'Credit Reports' in the sidebar">
+    The label has a small **NEW** badge and a gold shimmer animation.
+  </Step>
+  <Step title="A page opens with a button: 'Open Credit Reports'">
+    The page tries to launch automatically the first time. If your browser blocks the popup, tap the button manually.
+  </Step>
+  <Step title="A new browser tab opens at dev.capinex.in">
+    The CRM signs you in using your Capinex login. No password screen.
+  </Step>
+  <Step title="You land on the Bureau Reports table">
+    1,000+ records, paginated.
+  </Step>
+</Steps>
+
+<Tip>
+  The tab opens in a brand-new browser window. You can keep both Capinex Finance and Credit Reports open side by side.
+</Tip>
+
+## What you can do in the CRM
+
+<CardGroup cols={2}>
+  <Card title="Browse" icon="table">
+    Scroll through every bureau report your team has ever pulled. Sort by score, date, name.
+  </Card>
+  <Card title="Filter" icon="filter">
+    Use the filter sidebar — date range, score range, PAN, mobile, customer name, loan type.
+  </Card>
+  <Card title="View one report" icon="file-magnifying-glass">
+    Tap any row to see the full bureau detail — accounts, enquiries, CAPS, summary.
+  </Card>
+  <Card title="Export" icon="file-excel">
+    Tap **Export Excel** to download the current results as a spreadsheet (Admins and Super Admins only).
+  </Card>
+</CardGroup>
+
+## What different roles can do
+
+| Role | Browse | Filter | View detail | Export Excel |
+|---|---|---|---|---|
+| **User** | ✅ | ✅ | ✅ | ❌ |
+| **Admin** | ✅ | ✅ | ✅ | ✅ |
+| **Super Admin** | ✅ | ✅ | ✅ | ✅ |
+
+If you're a "User" role, the **Export Excel** button doesn't appear in your view.
+
+## Sign out of the CRM
+
+<Steps>
+  <Step title="In the CRM browser tab, click your name (top right)">
+  </Step>
+  <Step title="Click 'Sign out'">
+    The CRM tab shuts your session and redirects to a "Please launch from the Capinex app" message.
+  </Step>
+</Steps>
+
+<Note>
+  Signing out of the **Capinex Finance** app (in the main sidebar's Sign Out) **also signs you out of the Credit Reports CRM tab**. They're linked.
+</Note>
+
+## Common things people ask
+
+<AccordionGroup>
+  <Accordion title="The browser blocked the popup.">
+    The first launch opens a new tab. Some browsers block this on the first try. Click the **Open Credit Reports** button manually instead — that always works.
+  </Accordion>
+  <Accordion title="The CRM tab shows 'Session expired. Please relaunch from the Capinex app.'">
+    Sessions last 24 hours. Go back to Capinex Finance, tap Credit Reports, and a fresh CRM tab opens.
+  </Accordion>
+  <Accordion title="I see 'Access denied' or 403.">
+    Your account has 'allow_access' switched off in Access Control. Ask a Super Admin to turn it on.
+  </Accordion>
+  <Accordion title="Why can't I export?">
+    Only Admin and Super Admin roles can export. Ask a Super Admin to upgrade your role if you need this.
+  </Accordion>
+  <Accordion title="The CRM looks different from the main app.">
+    That's normal — it's a separate dashboard built specifically for browsing bureau data. Same login, different interface.
+  </Accordion>
+</AccordionGroup>
